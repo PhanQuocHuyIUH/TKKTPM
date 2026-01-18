@@ -1,0 +1,5 @@
+# Thêm vào .gitignore nếu dùng Git
+node_modules/
+.env
+*.log
+.DS_Store

@@ -1,0 +1,12 @@
+{
+  "name": "service1-producer",
+  "version": "1.0.0",
+  "description": "Service 1 - Event Producer",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.3"
+  }
+}

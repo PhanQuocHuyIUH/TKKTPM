@@ -1,0 +1,12 @@
+{
+  "name": "service2-consumer",
+  "version": "1.0.0",
+  "description": "Service 2 - Event Consumer",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.3"
+  }
+}
