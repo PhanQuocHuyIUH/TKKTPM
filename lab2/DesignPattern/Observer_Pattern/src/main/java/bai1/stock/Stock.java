@@ -20,6 +20,9 @@ public class Stock implements ISubject {
     
     @Override
     public void attach(IObserver observer) {
+        if (observer == null) {
+            throw new IllegalArgumentException("Observer cannot be null");
+        }
         if (!observers.contains(observer)) {
             observers.add(observer);
             System.out.println("Đã đăng ký theo dõi cổ phiếu " + symbol);
@@ -28,6 +31,9 @@ public class Stock implements ISubject {
     
     @Override
     public void detach(IObserver observer) {
+        if (observer == null) {
+            throw new IllegalArgumentException("Observer cannot be null");
+        }
         if (observers.remove(observer)) {
             System.out.println("Đã hủy đăng ký theo dõi cổ phiếu " + symbol);
         }

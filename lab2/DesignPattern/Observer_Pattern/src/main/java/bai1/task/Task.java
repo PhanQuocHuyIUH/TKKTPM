@@ -20,6 +20,9 @@ public class Task implements ITaskSubject {
     
     @Override
     public void attach(ITaskObserver observer) {
+        if (observer == null) {
+            throw new IllegalArgumentException("Observer cannot be null");
+        }
         if (!observers.contains(observer)) {
             observers.add(observer);
             System.out.println("✓ Đã đăng ký theo dõi task: " + name);
@@ -28,6 +31,9 @@ public class Task implements ITaskSubject {
     
     @Override
     public void detach(ITaskObserver observer) {
+        if (observer == null) {
+            throw new IllegalArgumentException("Observer cannot be null");
+        }
         if (observers.remove(observer)) {
             System.out.println("✗ Đã hủy đăng ký theo dõi task: " + name);
         }
@@ -35,6 +41,8 @@ public class Task implements ITaskSubject {
     
     @Override
     public void notifyObservers() {
+        // This implementation notifies with current status only
+        // For status changes, use the private notifyObserversWithChange method
         for (ITaskObserver observer : observers) {
             observer.update(name, status, status);
         }
@@ -45,6 +53,9 @@ public class Task implements ITaskSubject {
      * @param newStatus The new status
      */
     public void setStatus(TaskStatus newStatus) {
+        if (newStatus == null) {
+            throw new IllegalArgumentException("Task status cannot be null");
+        }
         if (this.status != newStatus) {
             TaskStatus oldStatus = this.status;
             this.status = newStatus;
