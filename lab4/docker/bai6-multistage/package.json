@@ -1,0 +1,13 @@
+{
+  "name": "hello-docker-multistage",
+  "version": "1.0.0",
+  "description": "Node.js TypeScript app demonstrating multi-stage Docker build",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  }
+}
