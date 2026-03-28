@@ -1,0 +1,43 @@
+{
+  "name": "lab06_db_optimization",
+  "version": "1.0.0",
+  "description": "22697421-Thình Vĩnh Phát",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "tsc && cp -r src/public dist/public",
+    "start": "node dist/index.js",
+    "migrate": "prisma migrate deploy",
+    "seed": "tsx prisma/seed.ts",
+    "studio": "prisma studio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/L-p-trinh-Mobile-422000181703/Lab06_DB_Optimization.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/L-p-trinh-Mobile-422000181703/Lab06_DB_Optimization/issues"
+  },
+  "homepage": "https://github.com/L-p-trinh-Mobile-422000181703/Lab06_DB_Optimization#readme",
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.5.0",
+    "@prisma/client": "^7.5.0",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "pg": "^8.20.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.5.0",
+    "@types/pg": "^8.20.0",
+    "prisma": "^7.5.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  }
+}
